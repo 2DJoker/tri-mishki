@@ -20,7 +20,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero__media">
-          <Ph src="/photos/hero.jpg" alt="Баня из сруба на хуторе" />
+          <Ph src="/photos/b-fire-terrace.jpg" alt="Терраса с очагом и подвесными креслами над прудом" />
         </div>
         <div className="hero__inner">
           <span className="eyebrow ember">Хутор на воде · Московская область</span>
@@ -47,7 +47,7 @@ export default function Home() {
       {/* О ХУТОРЕ */}
       <section className="section">
         <div className="container split">
-          <Ph src="/photos/hutor.jpg" alt="Хутор у реки Медвенка" className="reveal" />
+          <Ph src="/photos/h-house.jpg" alt="Гостевой дом хутора в летних цветах" className="reveal" />
           <div className="split__body reveal">
             <span className="eyebrow">О месте</span>
             <h2>Свой хутор на берегу, а не банный конвейер</h2>

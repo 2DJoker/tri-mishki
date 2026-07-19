@@ -75,12 +75,13 @@ const tabs = [
     price: "от 350 ₽ / гость",
     icon: "/photos/n-table.jpg",
     groups: breakfast,
+    // фото рыбы — kitchen-fish.jpg (стоит на «Обеде»)
   },
   {
     id: "lunch",
     label: "Обед",
     price: "от 2500 ₽ / гость",
-    icon: "/photos/lounge.jpg",
+    icon: "/photos/kitchen-fish.jpg",
     groups: lunch,
   },
 ] as const;
@@ -124,7 +125,7 @@ export default function FoodMenu() {
           </div>
 
           <div className="fmenu__photo">
-            <img src="/photos/h-veranda.jpg" alt="Большой стол на веранде хутора" loading="lazy" />
+            <img src="/photos/kitchen-table.jpg" alt="Хуторской стол с закусками" loading="lazy" />
             <div className="fmenu__caption">
               Меню хуторской кухни<br /><span>заказ вместе с бронью бани</span>
             </div>

@@ -1,5 +1,5 @@
 import { useScrollReveal } from "../hooks";
-import { baths, RACCOON_PRICE } from "../data/baths";
+import { baths } from "../data/baths";
 import { useBooking } from "../booking";
 import Ph from "../components/Ph";
 import RiverLine from "../components/RiverLine";
@@ -191,7 +191,7 @@ export default function Bani() {
             <div className="prow">
               <h4>Встреча с енотом</h4>
               <div className="pm">покормить, погладить, фото</div>
-              <div className="pp">{RACCOON_PRICE}<small>за визит</small></div>
+              <div className="pp">визит</div>
               <button className="btn" onClick={() => open("Встреча с енотом")}>Записаться</button>
             </div>
           </div>

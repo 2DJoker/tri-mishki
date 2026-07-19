@@ -1,5 +1,4 @@
 import { useBooking } from "../booking";
-import { RACCOON_PRICE } from "../data/baths";
 import Ph from "./Ph";
 
 export default function Raccoon({
@@ -30,9 +29,6 @@ export default function Raccoon({
             <h2 className="raccoon__title">{title}</h2>
             {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
             <div className="raccoon__price">
-              <div className="price">
-                <b>{RACCOON_PRICE}</b> <span>/ за визит</span>
-              </div>
               <button
                 className={`btn ${solidButton ? "btn--solid" : ""}`.trim()}
                 onClick={() => open("Встреча с енотом")}

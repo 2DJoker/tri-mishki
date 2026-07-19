@@ -34,8 +34,12 @@ export default function Nav() {
           <li><NavLink to="/" end>Главная</NavLink></li>
           <li><NavLink to="/hutor">Хутор</NavLink></li>
           <li><NavLink to="/bani">Бани</NavLink></li>
-          <li><NavLink to="/banya">Русская баня</NavLink></li>
           <li><a href="#contact">Контакты</a></li>
+          <li className="nav-cta">
+            <button className="btn btn--solid btn--block" onClick={() => open()}>
+              Забронировать
+            </button>
+          </li>
         </ul>
       </nav>
       <div className="nav-right">

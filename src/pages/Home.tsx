@@ -6,6 +6,8 @@ import Ph from "../components/Ph";
 import Arrow from "../components/Arrow";
 import RiverLine from "../components/RiverLine";
 import BathCard from "../components/BathCard";
+import FeatureSlider from "../components/FeatureSlider";
+import FoodMenu from "../components/FoodMenu";
 import Raccoon from "../components/Raccoon";
 import Contact from "../components/Contact";
 
@@ -90,6 +92,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ПЛАШКИ-СЛАЙДЕР */}
+      <FeatureSlider />
+
+      {/* КУХНЯ — МЕНЮ */}
+      <FoodMenu />
+
       {/* ЕНОТ */}
       <Raccoon
         eyebrow="Резидент хутора"
@@ -116,8 +124,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ЦИТАТА */}
+      {/* ГАЛЕРЕЯ */}
       <section className="section">
+        <div className="container">
+          <div className="section-head reveal">
+            <span className="eyebrow">Атмосфера</span>
+            <h2>Как это выглядит вживую</h2>
+          </div>
+          <div className="gallery reveal">
+            <Ph src="/photos/b-tub-autumn.jpg" alt="Купель с апельсинами золотой осенью" className="g-wide" />
+            <Ph src="/photos/veniki.jpg" alt="Банные веники и травы" />
+            <Ph src="/photos/m-tub-flowers.jpg" alt="Купель с полевыми цветами" />
+            <Ph src="/photos/b-fire-terrace.jpg" alt="Очаг на террасе над прудом" />
+            <Ph src="/photos/h-samovar.jpg" alt="Самовар на дровах" />
+            <Ph src="/photos/b-winter.jpg" alt="Баня зимним вечером с гирляндами" className="g-wide" />
+          </div>
+        </div>
+      </section>
+
+      {/* ЦИТАТА */}
+      <section className="section section--alt">
         <div className="container quote reveal">
           <span className="eyebrow ember center">Прямая речь</span>
           <blockquote>

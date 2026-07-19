@@ -42,4 +42,3 @@ src/
 
 Статика из `dist/` — на любой хостинг (Vercel, Netlify, Cloudflare Pages, обычный nginx).
 Для роутинга нужен SPA-fallback на `index.html` (на Vercel/Netlify — из коробки).
-# tri-mishki

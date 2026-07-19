@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { BookingProvider } from "./booking";
 import Nav from "./components/Nav";
@@ -6,13 +6,20 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Hutor from "./pages/Hutor";
 import Bani from "./pages/Bani";
-import Banya from "./pages/Banya";
+import Bath from "./pages/Bath";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
+    if (hash) {
+      // ждём, пока страница отрендерится, и скроллим к якорю
+      const t = setTimeout(() => {
+        document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+      return () => clearTimeout(t);
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 }
 
@@ -22,9 +29,9 @@ function GradientDefs() {
     <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden="true">
       <defs>
         <linearGradient id="rg" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stopColor="#7AA098" stopOpacity="0" />
-          <stop offset=".5" stopColor="#C8723A" />
-          <stop offset="1" stopColor="#7AA098" stopOpacity="0" />
+          <stop offset="0" stopColor="#3A3526" stopOpacity="0" />
+          <stop offset=".5" stopColor="#8C2F26" />
+          <stop offset="1" stopColor="#3A3526" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
@@ -42,7 +49,9 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/hutor" element={<Hutor />} />
           <Route path="/bani" element={<Bani />} />
-          <Route path="/banya" element={<Banya />} />
+          <Route path="/bani/:id" element={<Bath />} />
+          {/* старый раздел «Русская баня» объединён с «Банями» */}
+          <Route path="/banya" element={<Navigate to="/bani" replace />} />
         </Routes>
       </main>
       <Footer />

@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { useBooking } from "../booking";
 import type { Bath } from "../data/baths";
+import Arrow from "./Arrow";
 import Ph from "./Ph";
 
 export default function BathDetail({ bath }: { bath: Bath }) {
@@ -23,6 +25,9 @@ export default function BathDetail({ bath }: { bath: Bath }) {
           <button className="btn btn--solid" onClick={() => open(bath.name)}>
             Забронировать
           </button>
+          <Link className="link-arrow" to={`/bani/${bath.id}`}>
+            Подробнее <Arrow />
+          </Link>
           <span className="detail__hint">{bath.foot}</span>
         </div>
       </div>

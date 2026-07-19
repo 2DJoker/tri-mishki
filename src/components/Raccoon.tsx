@@ -9,6 +9,7 @@ export default function Raccoon({
   paragraphs,
   buttonLabel,
   solidButton = false,
+  img = "/photos/raccoon.jpg",
 }: {
   eyebrow: string;
   emberEyebrow?: boolean;
@@ -16,13 +17,14 @@ export default function Raccoon({
   paragraphs: string[];
   buttonLabel: string;
   solidButton?: boolean;
+  img?: string;
 }) {
   const { open } = useBooking();
   return (
     <section className="section">
       <div className="container">
         <div className="raccoon reveal">
-          <Ph variant="wood" label="фото: енот" />
+          <Ph variant="wood" src={img} alt="Енот — резидент хутора" />
           <div className="raccoon__body">
             <span className={`eyebrow ${emberEyebrow ? "ember" : ""}`.trim()}>{eyebrow}</span>
             <h2 className="raccoon__title">{title}</h2>

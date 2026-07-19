@@ -1,10 +1,9 @@
 import { useBooking } from "../booking";
 
-/** Координаты Лапино, Одинцовский г.о., МО */
-const LAT = 55.6645;
-const LON = 37.1385;
-const BBOX = `${LON - 0.02}%2C${LAT - 0.01}%2C${LON + 0.02}%2C${LAT + 0.01}`;
-const MAP_SRC = `https://www.openstreetmap.org/export/embed.html?bbox=${BBOX}&layer=mapnik&marker=${LAT}%2C${LON}`;
+/** Координаты хутора: Лапино, Одинцовский г.о., МО */
+const LAT = 55.682585;
+const LON = 37.152883;
+const MAP_SRC = `https://yandex.ru/map-widget/v1/?ll=${LON}%2C${LAT}&z=15&pt=${LON}%2C${LAT}%2Cpm2rdm`;
 
 export default function Contact({
   eyebrow,
@@ -43,7 +42,12 @@ export default function Contact({
           </div>
         </div>
         <div className="contact__map">
-          <iframe title="Карта — Лапино" src={MAP_SRC} loading="lazy" />
+          <iframe
+            title="Яндекс Карты — хутор на реке Медвенка, Лапино"
+            src={MAP_SRC}
+            loading="lazy"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>

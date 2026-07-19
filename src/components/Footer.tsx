@@ -12,7 +12,6 @@ export default function Footer() {
           <Link to="/">Главная</Link>
           <Link to="/hutor">Хутор</Link>
           <Link to="/bani">Бани</Link>
-          <Link to="/banya">Русская баня</Link>
           <a href="tel:+79936140645">+7 (993) 614-06-45</a>
         </nav>
         <small>© {new Date().getFullYear()} Бани на реке Медвенка</small>

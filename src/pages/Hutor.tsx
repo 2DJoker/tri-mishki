@@ -13,7 +13,7 @@ export default function Hutor() {
       {/* HERO */}
       <section className="hero hero--sm hero--page">
         <div className="hero__media">
-          <Ph src="/photos/veranda.jpg" alt="Веранда хутора с видом на лес" />
+          <Ph src="/photos/h-house.jpg" alt="Гостевой дом хутора летом" />
         </div>
         <div className="hero__inner">
           <span className="eyebrow">Хутор · Лапино</span>
@@ -48,7 +48,7 @@ export default function Hutor() {
               и на воздухе у воды.
             </p>
           </div>
-          <Ph src="/photos/terrace-tub.jpg" alt="Терраса с купелью в цветах" className="reveal" />
+          <Ph src="/photos/m-river-table.jpg" alt="Стол с вениками на берегу Медвенки" className="reveal" />
         </div>
       </section>
 
@@ -61,13 +61,13 @@ export default function Hutor() {
             <p>Несколько кадров с хутора — купели, веники и тёплое дерево.</p>
           </div>
           <div className="gallery reveal">
-            <Ph src="/photos/hero.jpg" alt="Баня из сруба" className="g-big" />
-            <Ph src="/photos/tub-winter.jpg" alt="Купель с мимозой зимой" />
-            <Ph src="/photos/veniki.jpg" alt="Банные веники" />
-            <Ph src="/photos/lounge.jpg" alt="Комната отдыха" />
-            <Ph src="/photos/tub-ferns.jpg" alt="Купель с папоротником" />
-            <Ph src="/photos/tub-mimosa.jpg" alt="Купель с цветами и видом на лес" className="g-wide" />
-            <Ph src="/photos/banya-inside.jpg" alt="Внутри бани" />
+            <Ph src="/photos/h-inside.jpg" alt="Печь и камин в гостевом доме" className="g-big" />
+            <Ph src="/photos/h-living.jpg" alt="Гостиная с камином" />
+            <Ph src="/photos/h-pech.jpg" alt="Белёная печь с травами" />
+            <Ph src="/photos/h-bedroom1.jpg" alt="Спальня-мансарда" />
+            <Ph src="/photos/h-bedroom2.jpg" alt="Спальня с антресолью" />
+            <Ph src="/photos/h-veranda.jpg" alt="Крытая веранда с большим столом" className="g-wide" />
+            <Ph src="/photos/h-samovar.jpg" alt="Самовар на дровах" />
           </div>
         </div>
       </section>

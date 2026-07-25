@@ -7,9 +7,54 @@ import Arrow from "../components/Arrow";
 import RiverLine from "../components/RiverLine";
 import BathCard from "../components/BathCard";
 import FeatureSlider from "../components/FeatureSlider";
+import OfferSlider, { type Offer } from "../components/OfferSlider";
 import FoodMenu from "../components/FoodMenu";
 import Raccoon from "../components/Raccoon";
 import Contact from "../components/Contact";
+
+const rooms: Offer[] = [
+  {
+    img: "/photos/h-bedroom1.jpg",
+    title: "Номер «Стандарт»",
+    meta: "для двоих · санузел · завтрак по запросу",
+    text: "Уютный номер в гостевом доме: тёплое дерево, мягкая кровать и тишина хутора за окном.",
+    price: "5500 ₽",
+    per: "ночь",
+    book: "Номер «Стандарт»",
+    link: "/nomera/standart",
+  },
+  {
+    img: "/photos/h-bedroom2.jpg",
+    title: "Номер «Большой» (семейный)",
+    meta: "для семьи · до 4 гостей",
+    text: "Просторный семейный номер — места хватит и взрослым, и детям. Утром — самовар и завтрак.",
+    price: "7000 ₽",
+    per: "ночь",
+    book: "Номер «Большой» (семейный)",
+    link: "/nomera/semeyny",
+  },
+];
+
+const events: Offer[] = [
+  {
+    img: "/photos/h-veranda.jpg",
+    title: "Беседка для шашлыка",
+    meta: "до 10 человек · с 11:00 до 22:00",
+    text: "Крытая беседка с мангальной зоной и большим столом. Жарьте шашлык, а мы подскажем с дровами и углём.",
+    price: "9000 ₽",
+    per: "день",
+    book: "Беседка для шашлыка",
+  },
+  {
+    img: "/photos/h-pech.jpg",
+    title: "Веранда и горница с печкой",
+    meta: "праздники · юбилеи · корпоративы",
+    text: "Веранда с длинным столом и горница с настоящей русской печкой — для мероприятий на весь день. Кухня хутора накроет стол.",
+    price: "от 15 000 ₽",
+    per: "аренда",
+    book: "Веранда и горница",
+  },
+];
 
 export default function Home() {
   const { open } = useBooking();
@@ -20,17 +65,18 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero__media">
-          <Ph src="/photos/b-fire-terrace.jpg" alt="Терраса с очагом и подвесными креслами над прудом" />
+          <Ph src="/photos/h-house.jpg" alt="Гостевой дом хутора в летних цветах" />
         </div>
         <div className="hero__inner">
-          <span className="eyebrow ember">Хутор на воде · Московская область</span>
-          <h1>Баня на дровах<br />у реки <em>Медвенка</em></h1>
+          <span className="eyebrow ember">На реке Медвенка · Московская область</span>
+          <h1>Хутор<br /><em>Русский лес</em></h1>
           <p className="hero__sub">
-            Три бани, живой огонь, тёплая древесина и тишина у воды. Место, куда
-            приезжают всей компанией или семьёй, чтобы выдохнуть и забыть про город.
+            Номера для ночёвки, беседки, бани на дровах и веранда для праздников —
+            целый хутор у воды, куда приезжают всей компанией или семьёй,
+            чтобы выдохнуть и забыть про город.
           </p>
           <div className="hero__cta">
-            <button className="btn btn--solid" onClick={() => open()}>Забронировать баню</button>
+            <button className="btn btn--solid" onClick={() => open()}>Забронировать</button>
             <Link className="btn btn--ghost" to="/bani">Смотреть бани</Link>
           </div>
           <div className="hero__meta">
@@ -47,14 +93,14 @@ export default function Home() {
       {/* О ХУТОРЕ */}
       <section className="section">
         <div className="container split">
-          <Ph src="/photos/h-house.jpg" alt="Гостевой дом хутора в летних цветах" className="reveal" />
+          <Ph src="/photos/hutor.jpg" alt="Дом хутора с подвесной кроватью" className="reveal" />
           <div className="split__body reveal">
             <span className="eyebrow">О месте</span>
             <h2>Свой хутор на берегу, а не банный конвейер</h2>
             <p>
-              Мы топим бани дровами и встречаем гостей по-домашнему. Никакой суеты
-              и соседей за стенкой — вы занимаете баню целиком, с камином, парной
-              и местом для отдыха у самой воды.
+              У нас можно остаться на ночь в номере, пожарить шашлык в беседке,
+              попариться в бане на дровах и отметить праздник на веранде с
+              русской печкой. Всё по-домашнему — без суеты и соседей за стенкой.
             </p>
             <p>
               Летом — река и природа за окном, зимой — снег и жар печи. А ещё на
@@ -62,7 +108,7 @@ export default function Home() {
             </p>
             <div className="split__stats">
               <div><b>3</b><span>бани на выбор</span></div>
-              <div><b>10–23</b><span>каждый день</span></div>
+              <div><b>2</b><span>номера для ночёвки</span></div>
               <div><b>1</b><span>дружелюбный енот</span></div>
             </div>
             <p className="mt-link">
@@ -71,6 +117,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* НОМЕРА */}
+      <OfferSlider
+        id="rooms"
+        alt
+        eyebrow="Остаться на ночь"
+        heading="Номера в гостевом доме"
+        text="Попарились — и никуда не едете: ночуете на хуторе, а утром вас ждёт самовар. Фото номеров скоро обновим."
+        caption="Номера хутора"
+        offers={rooms}
+      />
+
+      {/* БЕСЕДКИ И МЕРОПРИЯТИЯ */}
+      <OfferSlider
+        id="events"
+        eyebrow="Праздники и компании"
+        heading="Беседка, веранда и горница"
+        text="Шашлык с друзьями, день рождения или семейный сбор — на хуторе есть место под любой формат."
+        caption="Аренда под мероприятия"
+        offers={events}
+      />
 
       {/* БАНИ ПРЕВЬЮ */}
       <section className="section section--alt">

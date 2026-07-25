@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Hutor from "./pages/Hutor";
 import Bani from "./pages/Bani";
 import Bath from "./pages/Bath";
+import Room from "./pages/Room";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/hutor" element={<Hutor />} />
           <Route path="/bani" element={<Bani />} />
           <Route path="/bani/:id" element={<Bath />} />
+          <Route path="/nomera/:id" element={<Room />} />
           {/* старый раздел «Русская баня» объединён с «Банями» */}
           <Route path="/banya" element={<Navigate to="/bani" replace />} />
         </Routes>

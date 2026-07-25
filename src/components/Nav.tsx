@@ -33,8 +33,8 @@ export default function Nav() {
         <ul className={`nav-links ${menu ? "open" : ""}`} onClick={() => setMenu(false)}>
           <li><NavLink to="/" end>Главная</NavLink></li>
           <li><NavLink to="/hutor">Хутор</NavLink></li>
-          <li><Link to="/#rooms">Номера</Link></li>
-          <li><Link to="/#events">Беседки</Link></li>
+          <li><Link to="/#rooms">Резиденции</Link></li>
+          <li><Link to="/#events">Эвент-локации</Link></li>
           <li><NavLink to="/bani">Бани</NavLink></li>
           <li><a href="#contact">Контакты</a></li>
           <li className="nav-cta">

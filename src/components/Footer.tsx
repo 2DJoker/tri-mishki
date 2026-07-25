@@ -11,8 +11,8 @@ export default function Footer() {
         <nav className="foot-links">
           <Link to="/">Главная</Link>
           <Link to="/hutor">Хутор</Link>
-          <Link to="/#rooms">Номера</Link>
-          <Link to="/#events">Беседки</Link>
+          <Link to="/#rooms">Резиденции</Link>
+          <Link to="/#events">Эвент-локации</Link>
           <Link to="/bani">Бани</Link>
           <a href="tel:+79936140645">+7 (993) 614-06-45</a>
         </nav>

@@ -11,26 +11,27 @@ import OfferSlider, { type Offer } from "../components/OfferSlider";
 import FoodMenu from "../components/FoodMenu";
 import Raccoon from "../components/Raccoon";
 import Contact from "../components/Contact";
+import PhoneIcon from "../components/PhoneIcon";
 
 const rooms: Offer[] = [
   {
     img: "/photos/h-bedroom1.jpg",
-    title: "Резиденция «Стандарт»",
+    title: "Номер «Стандарт»",
     meta: "для двоих · санузел · завтрак по запросу",
-    text: "Уютная резиденция в гостевом доме: тёплое дерево, мягкая кровать и тишина хутора за окном.",
+    text: "Уютный номер в гостевом доме: тёплое дерево, мягкая кровать и тишина хутора за окном.",
     price: "5500 ₽",
     per: "ночь",
-    book: "Резиденция «Стандарт»",
+    book: "Номер «Стандарт»",
     link: "/nomera/standart",
   },
   {
     img: "/photos/h-bedroom2.jpg",
-    title: "Резиденция «Большая» (семейная)",
+    title: "Номер «Большой» (семейный)",
     meta: "для семьи · до 4 гостей",
-    text: "Просторная семейная резиденция — места хватит и взрослым, и детям. Утром — самовар и завтрак.",
+    text: "Просторный семейный номер — места хватит и взрослым, и детям. Утром — самовар и завтрак.",
     price: "7000 ₽",
     per: "ночь",
-    book: "Резиденция «Большая» (семейная)",
+    book: "Номер «Большой» (семейный)",
     link: "/nomera/semeyny",
   },
 ];
@@ -73,13 +74,17 @@ export default function Home() {
           <p className="hero__sub">
             Крестьянско-фермерское хозяйство здоровья, спокойствия и радости.
             Площадки для праздников, банный комплекс на дровах и гостевые
-            резиденции — у воды, вдали от суеты.
+            номера — у воды, вдали от суеты.
           </p>
           <div className="hero__cta">
-            <button className="btn btn--solid" onClick={() => open()}>Забронировать</button>
+            <a className="btn btn--solid btn--phone" href="tel:+79936140645">
+              <PhoneIcon /> +7 (993) 614-06-45
+            </a>
+            <button className="btn btn--ghost" onClick={() => open()}>Забронировать</button>
             <Link className="btn btn--ghost" to="/#events">Эвент-локации</Link>
             <Link className="btn btn--ghost" to="/#bani">Бани</Link>
-            <Link className="btn btn--ghost" to="/#rooms">Резиденции</Link>
+            <Link className="btn btn--ghost" to="/#rooms">Номера</Link>
+            <Link className="btn btn--ghost" to="/#travnik">Дед-травовед</Link>
           </div>
           <div className="hero__meta">
             <div className="chip"><span className="dot" /><b>4,8</b> рейтинг в Яндексе</div>
@@ -95,14 +100,14 @@ export default function Home() {
       {/* О ХУТОРЕ */}
       <section className="section">
         <div className="container split">
-          <Ph src="/photos/hutor.jpg" alt="Дом хутора с подвесной кроватью" className="reveal" />
+          <Ph src="/photos/windows.jpg" alt="Вид на лес из окна большой бани за травяным чаем и цветами" className="reveal" />
           <div className="split__body reveal">
             <span className="eyebrow">О месте</span>
             <h2>Свой хутор на берегу, а не банный конвейер</h2>
             <p>
               У нас отмечают праздники на веранде и в горнице с русской печкой,
               парятся в банях на дровах, жарят шашлык в беседках и остаются на
-              ночь в гостевых резиденциях. Всё по-домашнему — без суеты и
+              ночь в гостевых номерах. Всё по-домашнему — без суеты и
               соседей за стенкой.
             </p>
             <p>
@@ -111,7 +116,7 @@ export default function Home() {
             </p>
             <div className="split__stats">
               <div><b>3</b><span>бани на дровах</span></div>
-              <div><b>2</b><span>гостевые резиденции</span></div>
+              <div><b>2</b><span>гостевых номера</span></div>
               <div><b>1</b><span>дружелюбный енот</span></div>
             </div>
             <p className="mt-link">
@@ -152,14 +157,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ГОСТЕВЫЕ РЕЗИДЕНЦИИ */}
+      {/* ГОСТЕВЫЕ НОМЕРА */}
       <OfferSlider
         id="rooms"
         alt
         eyebrow="Остаться на ночь"
-        heading="Гостевые резиденции"
+        heading="Гостевые номера"
         text="Попарились или отгуляли праздник — и никуда не едете: ночуете на хуторе, а утром вас ждёт самовар."
-        caption="Резиденции хутора"
+        caption="Номера хутора"
         offers={rooms}
       />
 
@@ -178,6 +183,23 @@ export default function Home() {
         ]}
         buttonLabel="Записаться на встречу"
       />
+
+      {/* ДЕД-ТРАВОВЕД */}
+      <div id="travnik">
+        <Raccoon
+          eyebrow="Хуторской травник"
+          emberEyebrow
+          title="Дед-травовед — хранитель хуторских трав"
+          paragraphs={[
+            "На хуторе живёт свой травовед — дед, который сам собирает травы для веников, купелей и чая. Расскажет, какая трава для лёгкого пара, какая для здоровья, а какая просто для доброго настроения.",
+            "С ним можно прогуляться по лесу, узнать секреты банных веников или посидеть за иван-чаем и послушать хуторские истории.",
+          ]}
+          buttonLabel="Записаться к травоведу"
+          img="/photos/veniki.jpg"
+          imgAlt="Травы и веники хуторского травоведа"
+          bookingLabel="Встреча с дедом-травоведом"
+        />
+      </div>
 
       {/* ОСОБЕННОСТИ */}
       <section className="section section--alt">
@@ -209,6 +231,12 @@ export default function Home() {
             <Ph src="/photos/b-fire-terrace.jpg" alt="Очаг на террасе над прудом" />
             <Ph src="/photos/h-samovar.jpg" alt="Самовар на дровах" />
             <Ph src="/photos/b-winter.jpg" alt="Баня зимним вечером с гирляндами" className="g-wide" />
+            <Ph src="/photos/terrace-tub.jpg" alt="Купель с цветами на террасе с видом на лес" className="g-wide" />
+            <Ph src="/photos/n-facade-winter.jpg" alt="Нижняя баня снаружи" />
+            <Ph src="/photos/h-living.jpg" alt="Гостиная с камином в гостевом доме" />
+            <Ph src="/photos/b-parnaya.jpg" alt="Парная с печью в большой бане" />
+            <Ph src="/photos/m-swing.jpg" alt="Качели на веранде малой бани" />
+            <Ph src="/photos/tub-ferns.jpg" alt="Купель с папоротником" className="g-wide" />
           </div>
         </div>
       </section>

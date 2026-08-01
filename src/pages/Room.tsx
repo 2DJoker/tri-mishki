@@ -40,14 +40,14 @@ export default function Room() {
       <section className="section">
         <div className="container split">
           <div className="split__body reveal">
-            <span className="eyebrow">О резиденции</span>
+            <span className="eyebrow">О номере</span>
             <h2>{room.heroLine}</h2>
             {room.about.map((p, i) => <p key={i}>{p}</p>)}
             <div className="hero__cta">
               <button className="btn btn--solid" onClick={() => open(room.name)}>
-                Забронировать резиденцию
+                Забронировать номер
               </button>
-              <Link className="btn btn--ghost" to="/#rooms">Все резиденции</Link>
+              <Link className="btn btn--ghost" to="/#rooms">Все номера</Link>
             </div>
           </div>
           <Ph src={room.gallery[1]} alt={room.name} className="reveal" />
@@ -59,7 +59,7 @@ export default function Room() {
         <div className="container">
           <div className="section-head reveal">
             <span className="eyebrow">Галерея</span>
-            <h2>Как выглядит резиденция</h2>
+            <h2>Как выглядит номер</h2>
           </div>
           <div className="gallery reveal">
             <Ph src={room.gallery[0]} alt={room.name} className="g-big" />
@@ -115,7 +115,7 @@ export default function Room() {
         <div className="container">
           <div className="section-head reveal">
             <span className="eyebrow ember">Посмотрите ещё</span>
-            <h2>Другая резиденция</h2>
+            <h2>Другой номер</h2>
           </div>
           <div className="scard reveal">
             <div className="scard__media">
@@ -141,8 +141,8 @@ export default function Room() {
 
       <Contact
         eyebrow="Бронирование"
-        heading={`Забронировать «${room.name.replace("Резиденция «", "").replace("»", "").replace(" (семейная)", "")}»`}
-        text="Оставьте заявку или позвоните — подтвердим даты и подготовим резиденцию к вашему приезду."
+        heading={`Забронировать «${room.name.replace("Номер «", "").replace("»", "").replace(" (семейный)", "")}»`}
+        text="Оставьте заявку или позвоните — подтвердим даты и подготовим номер к вашему приезду."
       />
     </>
   );

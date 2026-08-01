@@ -157,6 +157,14 @@ h1,h2,h3{ font-family:"Inter", system-ui, sans-serif; font-weight:700; letter-sp
 .nav-phone{ font-size:1.05rem; font-weight:600; letter-spacing:.04em; color:var(--text); white-space:nowrap; }
 .nav-phone small{ display:block; font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; color:var(--text-mute); font-weight:600; }
 
+/* компактная кнопка звонка — подменяет .nav-phone, когда текст с номером прячется */
+.nav-callbtn{
+  display:none; align-items:center; justify-content:center;
+  width:42px; height:42px; border-radius:50%; flex:none;
+  color:var(--paper); background:linear-gradient(180deg,var(--ember),var(--ember-soft));
+  box-shadow:0 8px 24px -10px rgba(110,36,29,.55);
+}
+
 .burger{
   display:none; width:46px; height:46px; border:1px solid var(--line-strong);
   border-radius:var(--radius); background:rgba(255,255,255,.7); cursor:pointer;
@@ -221,6 +229,7 @@ h1,h2,h3{ font-family:"Inter", system-ui, sans-serif; font-weight:700; letter-sp
   .nav-links a{ font-family:"Inter",sans-serif; font-size:1.35rem; font-weight:700; }
   .nav-links .nav-cta{ display:block; margin-top:1.2rem; }
   .nav-phone{ display:none; }
+  .nav-callbtn{ display:flex; }
   .burger{ display:block; z-index:60; }
 }
 @media (max-width:940px) and (prefers-reduced-motion: reduce){

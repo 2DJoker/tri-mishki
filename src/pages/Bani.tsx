@@ -81,13 +81,13 @@ export default function Bani() {
               пихта и травы — для аромата.
             </p>
             <p>
-              После парной — купель с травами под открытым небом. Летом —
+              После парной — чан с травами под открытым небом. Летом —
               прохлада реки, зимой — снег и звенящий морозный воздух.
             </p>
             <div className="split__stats">
               <div><b>90°</b><span>жар в парной</span></div>
               <div><b>4</b><span>вида веников</span></div>
-              <div><b>2</b><span>купели с травами</span></div>
+              <div><b>2</b><span>чан с травами</span></div>
             </div>
           </div>
         </div>
@@ -97,8 +97,8 @@ export default function Bani() {
       <section className="section">
         <div className="container split">
           <div className="split__body reveal">
-            <span className="eyebrow">Купели</span>
-            <h2>Купель с травами под небом</h2>
+            <span className="eyebrow">Чан</span>
+            <h2>Чан с травами под небом</h2>
             <p>
               Наши купели — отдельная гордость. Наполняем их папоротником,
               мимозой, апельсинами и луговыми травами по сезону. Контраст

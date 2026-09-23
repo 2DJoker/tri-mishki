@@ -1,7 +1,7 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { useScrollReveal } from "../hooks";
 import { useBooking } from "../booking";
-import { baths, TUB_MENU } from "../data/baths";
+import { baths } from "../data/baths";
 import Ph from "../components/Ph";
 import RiverLine from "../components/RiverLine";
 import BathCard from "../components/BathCard";
@@ -127,35 +127,6 @@ export default function Bath() {
               Забронировать
             </button>
           </div>
-        </div>
-      </section>
-
-      {/* МЕНЮ КУПЕЛЕЙ */}
-      <section className="section section--alt" id="tubs">
-        <div className="container">
-          <div className="section-head reveal">
-            <span className="eyebrow">Дополнительно</span>
-            <h2>Меню купелей</h2>
-            <p>
-              К любой бане можно добавить купель под открытым небом — наполним
-              её к вашему приезду. Состав меняется по сезону.
-            </p>
-          </div>
-          <div className="rmenu reveal">
-            {TUB_MENU.map((t) => (
-              <div className="rmenu__row" key={t.name}>
-                <div className="rmenu__name">
-                  <h4>{t.name}</h4>
-                  <span>{t.note}</span>
-                </div>
-                <i className="rmenu__dots" />
-                <div className="rmenu__price">{t.price}</div>
-              </div>
-            ))}
-          </div>
-          <p className="rmenu__hint reveal">
-            Купель бронируется вместе с баней — скажите менеджеру, какую наполнить.
-          </p>
         </div>
       </section>
 
